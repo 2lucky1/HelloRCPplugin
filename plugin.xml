@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.4"?>
+<plugin>
+
+   <extension
+         id="application"
+         point="org.eclipse.core.runtime.applications">
+      <application>
+         <run
+               class="hello_rcp_plugin.Application">
+         </run>
+      </application>
+   </extension>
+   <extension
+         point="org.eclipse.ui.perspectives">
+      <perspective
+            name="RCP Perspective"
+            class="hello_rcp_plugin.Perspective"
+            id="Hello_RCP_plugin.perspective">
+      </perspective>
+   </extension>
+   <extension
+         point="org.eclipse.ui.menus">
+      <menuContribution
+            allPopups="false"
+            locationURI="menu:org.eclipse.ui.main.menu">
+         <menu
+               id="fileMenu"
+               label="File">
+            <command
+                  commandId="hello_rcp_plugin.commands"
+                  icon="icons/tree/head.png"
+                  label="Out"
+                  style="push"
+                  tooltip="Out">
+            </command>
+         </menu>
+      </menuContribution>
+   </extension>
+   <extension
+         point="org.eclipse.ui.commands">
+      <command
+            defaultHandler="hello_rcp_plugin.commands.ExitHandler"
+            id="hello_rcp_plugin.commands"
+            name="Out">
+      </command>
+   </extension>
+
+</plugin>

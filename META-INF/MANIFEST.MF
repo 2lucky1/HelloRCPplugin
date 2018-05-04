@@ -1,0 +1,15 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: Hello_RCP_plugin
+Bundle-SymbolicName: Hello_RCP_plugin;singleton:=true
+Bundle-Version: 1.0.0.qualifier
+Require-Bundle: org.eclipse.ui,
+ org.eclipse.core.runtime,
+ org.eclipse.ui,
+ org.eclipse.equinox.ds,
+ org.eclipse.equinox.util,
+ org.eclipse.equinox.event,
+ org.eclipse.core.commands,
+ org.eclipse.ui.workbench
+Automatic-Module-Name: Hello_RCP_plugin;singleton:=true
+Bundle-RequiredExecutionEnvironment: JavaSE-1.8
